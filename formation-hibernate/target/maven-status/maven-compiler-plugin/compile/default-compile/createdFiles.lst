@@ -1,0 +1,3 @@
+com\formation\tutorial\domain\Person.class
+com\formation\tutorial\util\HibernateUtil.class
+com\formation\tutorial\domain\Event.class
