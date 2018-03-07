@@ -19,10 +19,15 @@ public class PersonManager {
 			transaction = session.getTransaction();
 			transaction.begin();
 			PersonManager mgr = new PersonManager();
-			//mgr.createAndStorePerson((long)6666, "Berenger", "Thevenet", 23, session);
 			
+			//create and store
+			//mgr.createAndStorePerson(6666, "Berenger", "Thevenet", 23, session);
+			
+			//read
 			Person p = session.find(Person.class, 6666);
-			System.out.println(p);
+			System.out.println("read : " + p);
+			
+			
 			transaction.commit();
 			System.out.println("Records saved successfully");
 
@@ -42,7 +47,7 @@ public class PersonManager {
 		HibernateUtil.shutdown();
 	}
 
-	private void createAndStorePerson(Long i, String firstname, String lastname, int age, Session session) {
+	private void createAndStorePerson(int i, String firstname, String lastname, int age, Session session) {
 
 		Event e = new Event();	
 		Person person = new Person();

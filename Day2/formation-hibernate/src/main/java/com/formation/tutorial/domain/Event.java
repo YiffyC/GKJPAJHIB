@@ -27,7 +27,7 @@ public class Event implements Serializable{
 	@Id
 	//@GeneratedValue
 	@Column(name="EVENT_ID")
-	private Long id;	
+	private int id;	
 
 	private String title;
 	private Date date;
@@ -36,13 +36,13 @@ public class Event implements Serializable{
 	public Event() {
 	}
 
-	public Long getId() {
+	public int getId() {
 		return id;
 	}
 
 	//@SuppressWarnings("unused")
-	public void setId(Long id) {
-		this.id = id;
+	public void setId(int i) {
+		this.id = i;
 	}
 
 	public Date getDate() {

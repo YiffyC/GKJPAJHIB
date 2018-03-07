@@ -18,9 +18,9 @@ public class Person implements Serializable
 {
 	private static final long serialVersionUID = -3129713844982050964L;
 	@Id
-	@GeneratedValue
+	//@GeneratedValue
 	@Column(name = "PERSON_ID")
-	private Long id;
+	private int id;
 	private int age;
 	private String firstname;
 	private String lastname;
@@ -44,11 +44,11 @@ public class Person implements Serializable
 		this.age = age;
 	}
 
-	public Long getId() {
+	public int getId() {
 		return id;
 	}
 
-	public void setId(Long i) {
+	public void setId(int i) {
 		this.id = i;
 	}
 
@@ -84,7 +84,7 @@ public class Person implements Serializable
 
 	@Override
 	public String toString() {
-		return "Person [id=" + id + ", age=" + age + ", firstname=" + firstname + ", lastname=" + lastname + "]";
+		return "Person [id=" + id + ", age=" + age + ", firstname=" + firstname + ", lastname=" + lastname + ", note : " + note+ "]";
 	}
 
 	public void setLastname(String lastname) {
